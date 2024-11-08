@@ -13,7 +13,12 @@
 # Lecture CdC (15 mins)
 
  - Lu et rempli le Cdc
-//Jai oublie de faire un commit pour ca
+
+
 # Aide Antoine (10 mins)
 
  - Aide Antoine (Il avait un RDV)
+
+# Ecoute presentation stash (10 mins)
+
+ - Jai ecoute le prof parler de stash
