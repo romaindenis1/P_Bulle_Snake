@@ -22,7 +22,7 @@
 ### Ecoute presentation stash (10 mins)
 
  - Jai ecoute le prof parler de stash
-2:50
+
 ### Lecture Doc JS (70 mins)
 
  - Jai lu la doc @ https://javascript.info/
@@ -30,5 +30,9 @@
 
 
 ## 15.11.2024
+
+### Spawn apple (65mins)
+
+ - Mon code spawn un carre rouge aleatoirement dans le canvas  
 
 #### Je vais commencer le code a partir de la base founie
