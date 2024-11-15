@@ -38,3 +38,7 @@
 ### Cube qui bouge (1h35min)
 
  - J'ai un cube qui bouge 
+
+### Cleanup du code (60mins)
+
+ - Tout le code est dans le bon .js
