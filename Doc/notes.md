@@ -35,4 +35,6 @@
 
  - Mon code spawn un carre rouge aleatoirement dans le canvas  
 
-#### Je vais commencer le code a partir de la base founie
+### Cube qui bouge (1h35min)
+
+ - J'ai un cube qui bouge 
