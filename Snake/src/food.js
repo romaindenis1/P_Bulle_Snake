@@ -11,8 +11,8 @@
  */
 let appleX;
 let appleY;
-let appleHeight = 20;
-let appleWidth = 20;
+let appleHeight = 24;
+let appleWidth = 24;
 let gameHeight = 600 - appleHeight;
 let gameWitdh = 600 - appleWidth;
 const appleColor = "red"
