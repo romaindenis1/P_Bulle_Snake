@@ -18,7 +18,6 @@ export function handleDirectionChange(event, isMovingRight, isMovingLeft, isMovi
         snakeXToChange = 0;
         snakeYToChange = -24;
 
-        
         isMovingUp = true;
         isMovingRight = false;
         isMovingDown = false;
@@ -31,7 +30,6 @@ export function handleDirectionChange(event, isMovingRight, isMovingLeft, isMovi
       if (!isMovingUp) { 
         snakeXToChange = 0;
         snakeYToChange = 24;
-
         
         isMovingDown = true;
         isMovingUp = false;
@@ -45,7 +43,6 @@ export function handleDirectionChange(event, isMovingRight, isMovingLeft, isMovi
       if (!isMovingRight) { 
         snakeXToChange = -24;
         snakeYToChange = 0;
-
         
         isMovingLeft = true;
         isMovingUp = false;
@@ -59,7 +56,6 @@ export function handleDirectionChange(event, isMovingRight, isMovingLeft, isMovi
       if (!isMovingLeft) { 
         snakeXToChange = 24;
         snakeYToChange = 0;
-
         
         isMovingRight = true;
         isMovingUp = false;
