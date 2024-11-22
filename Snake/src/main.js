@@ -15,10 +15,10 @@ let snake;
 let food;
 let direction = "RIGHT";
 let score = 0;
-let gameInterval = 10; // Variable pour stocker l'identifiant de l'intervalle
+let gameInterval = 10;
 let snakeX = 0;
 let snakeY = 0;
-
+let snakeSize = 25;
 
 const gameWidth = gameCanvas.width - 45;
 const gameHeight = gameCanvas.height - 45;
@@ -39,19 +39,18 @@ function startGame() {
   */
   food = SpawnApple(box, canvas);
   
-  gameInterval = setInterval(Move, gameSpeed); // Stockage de l'identifiant de l'intervalle
   gameInterval = setInterval(Move, gameSpeed);
 }
 
 function Move() {
   ctx.beginPath();
   ctx.clearRect(snakeX-5, snakeY-5, 55, 55);
-  snakeX+=1;
-  snakeY+=1;
-  ctx.rect(snakeX, snakeY, 45, 45);
+  snakeX+=snakeSize;
+  //snakeY+=1;
+  ctx.rect(snakeX, snakeY, snakeSize, snakeSize);
   ctx.stroke();
   ctx.fillStyle = "white";
-  ctx.fillRect(snakeX, snakeY, 45, 45);
+  ctx.fillRect(snakeX, snakeY, snakeSize, snakeSize);
 }
 
 startGame();

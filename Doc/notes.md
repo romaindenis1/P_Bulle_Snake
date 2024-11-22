@@ -28,7 +28,6 @@
  - Jai lu la doc @ https://javascript.info/
  - Jai edit le README.md
 
-
 ## 15.11.2024
 
 ### Spawn apple (65mins)
@@ -42,3 +41,9 @@
 ### Cleanup du code (60mins)
 
  - Tout le code est dans le bon .js
+
+## 22.11.2024
+
+### Prof parle (30mins)
+
+ - En gros il y a un icetools pour git
