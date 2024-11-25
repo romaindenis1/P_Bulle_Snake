@@ -1,6 +1,6 @@
 
 //import { initSnake, moveSnake, drawSnake } from "./snake.js";
-import { GetRandomPos, SpawnApple } from "./food.js";
+import { DrawApple, SpawnApple } from "./food.js";
 import { handleDirectionChange } from "./controls.js";
 //import { checkCollision, checkWallCollision } from "./collision.js";
 //import { drawScore } from "./score.js";
@@ -10,15 +10,19 @@ const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
 const box = 20;
-const gameSpeed = 200;
+const gameSpeed = 100;
 let snake;
 let food;
 let isMovingRight = false;
 let isMovingUp = false;
 let isMovingLeft = false;
 let isMovingDown = false;
+let isGameRunning = false;
+
 let score = 0;
 let gameInterval = 10;
+
+let backgroundColor = "#1f1f1f";
 
 let snakeX = 0;
 let snakeY = 0;
@@ -29,12 +33,10 @@ let snakeYToChange = 0;
 const gameWidth = gameCanvas.width - 45;
 const gameHeight = gameCanvas.height - 45;
 
-
 function checkKey(e) {
   var event = window.keyPressed ? window.keyPressed : e;
   console.log(event.keyCode);
 }
-
 
 document.addEventListener("keydown", (keyPressed) => {
   const direction = handleDirectionChange(event, snakeXToChange, snakeYToChange);
@@ -50,14 +52,30 @@ function startGame() {
   /*
   snake = initSnake();
   */
-  food = SpawnApple(box, canvas);
-  
-  gameInterval = setInterval(Move, gameSpeed);
-  game2Interval = setInterval(Move, gameSpeed / 2);
+  isGameRunning = true;
+  SpawnApple();
+  Tick();
 }
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function Tick()
+{
+  if (isGameRunning)
+    setTimeout(()=>{
+      ClearBoard();
+      DrawApple();
+      Move();
+      Tick();
+  }, gameSpeed)
+}
+
+function ClearBoard()
+{
+  ctx.fillStyle = backgroundColor;
+  ctx.fillRect(0, 0, gameWidth + 45, gameHeight + 45)  
 }
 
 function Move() {

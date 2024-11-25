@@ -23,8 +23,7 @@ const ctx = canvas.getContext("2d");
 
 export function GetRandomPos()
 {
-  let randomNumber = Math.floor(Math.random() * (gameHeight + 1));
-  return randomNumber;
+  return Math.floor(Math.random() * (600 / 45)) * 45;
 }
 
 /**
@@ -39,11 +38,19 @@ export function GetRandomPos()
  * @param {number} box - La taille d'une case de la grille en pixels, utilisée pour déterminer la taille de la nourriture.
  */
 
+let isAppleTouched = false;
+
 export function SpawnApple()
 {
   appleX = GetRandomPos();
   appleY = GetRandomPos();
-
+}
+export function DrawApple()
+{
+  if (isAppleTouched)
+  {
+    SpawnApple();
+  }
   ctx.rect(appleX, appleY, appleWidth , appleHeight);
   ctx.stroke();
   ctx.fillStyle = appleColor;
