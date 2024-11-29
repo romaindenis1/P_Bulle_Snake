@@ -27,6 +27,9 @@ function checkCollision() {
  * @param {number} box - La taille d'une case de la grille en pixels, utilisée pour déterminer les limites du déplacement du serpent.
  * @returns {boolean} - Retourne `true` si la tête du serpent entre en collision avec un mur, sinon `false`.
  */
-function checkWallCollision() {
-  // A compléter
+export function checkWallCollision(snakeX, snakeY, gameWidth, gameHeight) {
+  if (snakeX < 0 || snakeX >= gameWidth || snakeY < 0 || snakeY >= gameHeight) {
+    return true; 
+  }
+  return false;
 }

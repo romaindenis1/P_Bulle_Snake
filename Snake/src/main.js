@@ -2,7 +2,7 @@
 //import { initSnake, moveSnake, drawSnake } from "./snake.js";
 import { DrawApple, SpawnApple } from "./food.js";
 import { handleDirectionChange } from "./controls.js";
-//import { checkCollision, checkWallCollision } from "./collision.js";
+import { checkWallCollision } from "./collision.js"; //checkCollision, 
 //import { drawScore } from "./score.js";
 
 //const
@@ -11,77 +11,55 @@ const ctx = canvas.getContext("2d");
 
 const gameWidth = gameCanvas.width;
 const gameHeight = gameCanvas.height;
-const appleSpawnWidth = gameCanvas.width - 24;
-const appleSpawnHeight = gameCanvas.height - 24;
 
-const snakeColor = "white"
+const snakeColor = "white";
 const box = 20;
 const gameSpeed = 75;
 
-//snake
-let snake;
+
 let isMovingRight = false;
 let isMovingUp = false;
 let isMovingLeft = false;
 let isMovingDown = false;
-let snakeX = 0;
-let snakeY = 0;
+let snakeX = gameWidth / 2 - 12; 
+let snakeY = gameHeight / 2 - 12; 
 let snakeSize = 24;
 let snakeXToChange = 24;
 let snakeYToChange = 0;
+let currentDirection;
 
-//global
 let isGameRunning = false;
 let score = 0;
 let gameInterval = 10;
 let backgroundColor = "#1f1f1f";
 
-//idk
-let food;
-let direction = "r";
-
-function checkKey(e) {
-  var event = window.keyPressed ? window.keyPressed : e;
-  console.log(event.keyCode);
-}
-
-
 
 function startGame() {
-  /*
-  snake = initSnake();
-  */
   isGameRunning = true;
   SpawnApple();
   Tick();
 }
 
-function Tick()
-{
+function Tick() {
   if (isGameRunning) {
-    setTimeout (()=>{
-      debugger
+    setTimeout(() => {
       ClearBoard();
       DrawApple();
-      Draw();
       Move();
+      Draw();
       Tick();
-    },gameSpeed)
+    }, gameSpeed);
   }
 }
 
-function ClearBoard()
-{
+function ClearBoard() {
   ctx.fillStyle = backgroundColor;
-  ctx.fillRect(0, 0, gameWidth, gameHeight)  
+  ctx.fillRect(0, 0, gameWidth, gameHeight);
 }
 
 function Draw() {
   ctx.beginPath();
   ctx.clearRect(snakeX-5, snakeY-5, 55, 55);
-  
-  snakeX+=snakeXToChange;
-  snakeY+=snakeYToChange;
 
   ctx.rect(snakeX, snakeY, snakeSize, snakeSize);
   ctx.stroke();
@@ -89,20 +67,25 @@ function Draw() {
   ctx.fillRect(snakeX, snakeY, snakeSize, snakeSize);
 }
 
+document.addEventListener("keydown", (keyPressed) => {
+  const direction = handleDirectionChange(keyPressed, currentDirection, snakeXToChange, snakeYToChange);
+  currentDirection = direction.RIGHT;
 
+  snakeXToChange = direction.snakeXToChange;
+  snakeYToChange = direction.snakeYToChange;
+  currentDirection = direction.currentDirection;
 
-  document.addEventListener("keydown", (keyPressed) => {
-    const direction = handleDirectionChange(keyPressed, snakeXToChange, snakeYToChange);
-    snakeXToChange = direction.snakeXToChange;
-    snakeYToChange = direction.snakeYToChange;
-    isMovingDown = direction.isMovingDown;
-    isMovingUp = direction.isMovingUp;
-    isMovingRight = direction.isMovingRight;
-    isMovingLeft = direction.isMovingLeft;
-  });
-function Move()
-{
-  
+  console.log(`Snake Position: X=${snakeX}, Y=${snakeY}`);
+  console.log(`Direction: Up=${isMovingUp}, Down=${isMovingDown}, Left=${isMovingLeft}, Right=${isMovingRight}`);
+});
+
+function Move() {
+  snakeX += snakeXToChange;
+  snakeY += snakeYToChange;
+
+  if (checkWallCollision(snakeX, snakeY, gameWidth, gameHeight)) {
+    isGameRunning = false;
+  }
 }
 
 startGame();

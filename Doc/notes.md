@@ -70,3 +70,8 @@
 
 - J'ai ete evalue par le prof
 - Le prof a regarde mon code et a fait des recommendations
+
+### Bugfix Movement (25mins)
+
+- J'ai enfin resolut mon probleme de mouvement
+- J'ai ajoute un check pour pas pouvoir toucher les murs

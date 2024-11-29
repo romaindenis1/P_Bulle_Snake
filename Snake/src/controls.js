@@ -10,56 +10,46 @@
  * @param {string} currentDirection - La direction actuelle du serpent (peut être "UP", "DOWN", "LEFT", ou "RIGHT").
  * @returns {string} - La nouvelle direction du serpent après traitement, ou la direction actuelle si le changement n'est pas valide.
  */
-export function handleDirectionChange(event, isMovingRight, isMovingLeft, isMovingDown, isMovingUp, snakeXToChange, snakeYToChange) {
+const MoveAmount = 24;
+const Direction = Object.freeze({
+  UP: 'UP',
+  DOWN: 'DOWN',
+  LEFT: 'LEFT',
+  RIGHT: 'RIGHT',
+});
   //TODO utiliser une enum a la place de 4 bools
-  switch (event.key) {
-    case "w":
-      if (!isMovingDown) { 
-        snakeXToChange = 0;
-        snakeYToChange = -24;
-
-        isMovingUp = true;
-        isMovingRight = false;
-        isMovingDown = false;
-        isMovingLeft = false;
-      }
-      break;
-    case "s":
-      if (!isMovingUp) { 
-        snakeXToChange = 0;
-        snakeYToChange = 24;
-        
-        isMovingDown = true;
-        isMovingUp = false;
-        isMovingRight = false;
-        isMovingLeft = false;
-      }
-      break;
-    case "a":
-      if (!isMovingRight) { 
-        snakeXToChange = -24;
-        snakeYToChange = 0;
-        
-        isMovingLeft = true;
-        isMovingUp = false;
-        isMovingRight = false;
-        isMovingDown = false;
-      }
-      break;
-    case "d":
-      if (!isMovingLeft) { 
-        snakeXToChange = 24;
-        snakeYToChange = 0;
-        
-        isMovingRight = true;
-        isMovingUp = false;
-        isMovingDown = false;
-        isMovingLeft = false;
-      }
-      break;
-    default:
-      break; 
+  export function handleDirectionChange(keyPressed, currentDirection, snakeXToChange, snakeYToChange) {
+    switch (keyPressed.key) {
+      case "w": // Move Up
+        if (currentDirection !== Direction.DOWN) {
+          snakeXToChange = 0;
+          snakeYToChange = -24; // Set the change in Y direction (move up)
+          currentDirection = Direction.UP;
+        }
+        break;
+      case "s": // Move Down
+        if (currentDirection !== Direction.UP) {
+          snakeXToChange = 0;
+          snakeYToChange = 24; // Set the change in Y direction (move down)
+          currentDirection = Direction.DOWN;
+        }
+        break;
+      case "a": // Move Left
+        if (currentDirection !== Direction.RIGHT) {
+          snakeXToChange = -24; // Set the change in X direction (move left)
+          snakeYToChange = 0;
+          currentDirection = Direction.LEFT;
+        }
+        break;
+      case "d": // Move Right
+        if (currentDirection !== Direction.LEFT) {
+          snakeXToChange = 24; // Set the change in X direction (move right)
+          snakeYToChange = 0;
+          currentDirection = Direction.RIGHT;
+        }
+        break;
+      default:
+        break;
+    }
+    return { snakeXToChange, snakeYToChange, currentDirection };
   }
-
-  return { snakeXToChange, snakeYToChange, isMovingDown, isMovingLeft, isMovingRight, isMovingUp };
-}
