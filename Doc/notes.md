@@ -66,7 +66,7 @@
 
 - J'ai essaye de bugfix mon mouvement
 
-### Evaluation avec Prof(80mins)
+### Evaluation avec Prof (80mins)
 
 - J'ai ete evalue par le prof
 - Le prof a regarde mon code et a fait des recommendations
