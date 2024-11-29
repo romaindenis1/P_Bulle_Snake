@@ -11,8 +11,8 @@
  * @returns {string} - La nouvelle direction du serpent après traitement, ou la direction actuelle si le changement n'est pas valide.
  */
 export function handleDirectionChange(event, isMovingRight, isMovingLeft, isMovingDown, isMovingUp, snakeXToChange, snakeYToChange) {
+  //TODO utiliser une enum a la place de 4 bools
   switch (event.key) {
-    case "ArrowUp":
     case "w":
       if (!isMovingDown) { 
         snakeXToChange = 0;
@@ -24,8 +24,6 @@ export function handleDirectionChange(event, isMovingRight, isMovingLeft, isMovi
         isMovingLeft = false;
       }
       break;
-
-    case "ArrowDown":
     case "s":
       if (!isMovingUp) { 
         snakeXToChange = 0;
@@ -37,8 +35,6 @@ export function handleDirectionChange(event, isMovingRight, isMovingLeft, isMovi
         isMovingLeft = false;
       }
       break;
-
-    case "ArrowLeft":
     case "a":
       if (!isMovingRight) { 
         snakeXToChange = -24;
@@ -50,8 +46,6 @@ export function handleDirectionChange(event, isMovingRight, isMovingLeft, isMovi
         isMovingDown = false;
       }
       break;
-
-    case "ArrowRight":
     case "d":
       if (!isMovingLeft) { 
         snakeXToChange = 24;
@@ -63,11 +57,9 @@ export function handleDirectionChange(event, isMovingRight, isMovingLeft, isMovi
         isMovingLeft = false;
       }
       break;
-
     default:
       break; 
   }
 
-  
   return { snakeXToChange, snakeYToChange, isMovingDown, isMovingLeft, isMovingRight, isMovingUp };
 }

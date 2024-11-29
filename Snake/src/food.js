@@ -9,22 +9,19 @@
  * @param {HTMLCanvasElement} canvas - L'élément canvas représentant la surface de jeu.
  * @returns {{x: number, y: number}} - Un objet contenant les coordonnées `x` et `y` de la nourriture générée.
  */
+
+const appleColor = "red"
+const canvas = document.getElementById("gameCanvas");
+const ctx = canvas.getContext("2d");
+
 let appleX;
 let appleY;
 let appleHeight = 24;
 let appleWidth = 24;
 let gameHeight = 600 - appleHeight;
 let gameWitdh = 600 - appleWidth;
-const appleColor = "red"
 let appleNumber = 1;
-
-const canvas = document.getElementById("gameCanvas");
-const ctx = canvas.getContext("2d");
-
-export function GetRandomPos()
-{
-  return Math.floor(Math.random() * (600 / 45)) * 45;
-}
+let isAppleTouched = false;
 
 /**
  * Dessine la nourriture sur le canvas à la position spécifiée.
@@ -38,7 +35,10 @@ export function GetRandomPos()
  * @param {number} box - La taille d'une case de la grille en pixels, utilisée pour déterminer la taille de la nourriture.
  */
 
-let isAppleTouched = false;
+function GetRandomPos()
+{
+  return Math.floor(Math.random() * (600 / 24)) * 24;
+}
 
 export function SpawnApple()
 {

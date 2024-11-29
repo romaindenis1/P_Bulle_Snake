@@ -48,14 +48,25 @@
 
  - En gros il y a un icetools pour git
 
- ### Mouvement (60mins)
+### Mouvement (60mins)
 
   - Mon cube bouge
 
- ### Bugfix
+### Bugfix
 
   - J'ai essaye de buxfix mon code
 
-  ### RDV (reste de l'apre-midi )
+### RDV (135mins)
 
   - J'ai eu un RDV et j'ai du partir 
+
+## 29.11.2024
+
+### Bugfix Mouvement (20mins)
+
+- J'ai essaye de bugfix mon mouvement
+
+### Evaluation avec Prof(80mins)
+
+- J'ai ete evalue par le prof
+- Le prof a regarde mon code et a fait des recommendations
