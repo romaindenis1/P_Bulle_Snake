@@ -35,17 +35,17 @@ let isAppleTouched = false;
  * @param {number} box - La taille d'une case de la grille en pixels, utilisée pour déterminer la taille de la nourriture.
  */
 
-function GetRandomPos()
+function getRandomPos()
 {
   return Math.floor(Math.random() * (600 / 24)) * 24;
 }
 
-export function SpawnApple()
+export function spawnApple()
 {
-  appleX = GetRandomPos();
-  appleY = GetRandomPos();
+  appleX = getRandomPos();
+  appleY = getRandomPos();
 }
-export function DrawApple()
+export function drawApple()
 {
   if (isAppleTouched)
   {

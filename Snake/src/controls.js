@@ -23,27 +23,27 @@ const Direction = Object.freeze({
       case "w": // Move Up
         if (currentDirection !== Direction.DOWN) {
           snakeXToChange = 0;
-          snakeYToChange = -24; // Set the change in Y direction (move up)
+          snakeYToChange = -24; 
           currentDirection = Direction.UP;
         }
         break;
       case "s": // Move Down
         if (currentDirection !== Direction.UP) {
           snakeXToChange = 0;
-          snakeYToChange = 24; // Set the change in Y direction (move down)
+          snakeYToChange = 24; 
           currentDirection = Direction.DOWN;
         }
         break;
       case "a": // Move Left
         if (currentDirection !== Direction.RIGHT) {
-          snakeXToChange = -24; // Set the change in X direction (move left)
+          snakeXToChange = -24; 
           snakeYToChange = 0;
           currentDirection = Direction.LEFT;
         }
         break;
       case "d": // Move Right
         if (currentDirection !== Direction.LEFT) {
-          snakeXToChange = 24; // Set the change in X direction (move right)
+          snakeXToChange = 24; 
           snakeYToChange = 0;
           currentDirection = Direction.RIGHT;
         }

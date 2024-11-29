@@ -1,3 +1,4 @@
+
 /**
  * Initialise le serpent au début du jeu.
  *
@@ -6,6 +7,7 @@
  *
  * @returns {Array<{x: number, y: number}>} - Un tableau contenant un objet représentant la position du premier segment du serpent.
  */
+
 function initSnake() {
   // A compléter
 }
@@ -22,9 +24,7 @@ function initSnake() {
  * @param {number} box - La taille d'une case de la grille en pixels, utilisée pour déterminer la distance de déplacement du serpent.
  * @returns {{x: number, y: number}} - Un objet représentant les nouvelles coordonnées `x` et `y` de la tête du serpent après le déplacement.
  */
-function moveSnake() {
-  // A compléter
-}
+
 
 /**
  * Dessine le serpent sur le canvas.
@@ -38,6 +38,26 @@ function moveSnake() {
  * @param {Array<{x: number, y: number}>} snake - Un tableau représentant le serpent, où chaque élément est un segment avec des coordonnées `x` et `y`.
  * @param {number} box - La taille d'une case de la grille en pixels, utilisée pour déterminer la taille de chaque segment du serpent.
  */
-function drawSnake() {
-  // A compléter
+import {gameWidth, gameHeight, snakeX, snakeY} from './main.js';
+
+export let snakeXToChange = 24;
+export let snakeYToChange = 0;
+
+export function moveSnake() {
+  snakeX += snakeXToChange;
+  snakeY += snakeYToChange;
+
+  if (checkWallCollision(snakeX, snakeY, gameWidth, gameHeight)) {
+    isGameRunning = false;
+  }
+}
+
+export function drawSnake() {
+  ctx.beginPath();
+  ctx.clearRect(snakeX-5, snakeY-5, 55, 55);
+
+  ctx.rect(snakeX, snakeY, snakeSize, snakeSize);
+  ctx.stroke();
+  ctx.fillStyle = snakeColor;
+  ctx.fillRect(snakeX, snakeY, snakeSize, snakeSize);
 }
