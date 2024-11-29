@@ -52,6 +52,10 @@
 
   - Mon cube bouge
 
- ### BUgfix
+ ### Bugfix
 
   - J'ai essaye de buxfix mon code
+
+  ### RDV (reste de l'apre-midi )
+
+  - J'ai eu un RDV et j'ai du partir 
