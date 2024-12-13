@@ -1,81 +1,36 @@
+import { direction } from './controls.js';  
+import { checkAppleCollision } from './food.js';
 
-/**
- * Initialise le serpent au début du jeu.
- *
- * Cette fonction crée le serpent en tant que tableau contenant un seul segment,
- * positionné à une position de départ définie sur la grille.
- *
- * @returns {Array<{x: number, y: number}>} - Un tableau contenant un objet représentant la position du premier segment du serpent.
- */
+let snake = [{ x: 200, y: 200 }];  
 
-function initSnake() {
-  // A compléter
-}
+export function moveSnake(gridSize) {
+  const head = { ...snake[0] };
 
-/**
- * Déplace le serpent dans la direction actuelle.
- *
- * Cette fonction calcule la nouvelle position de la tête du serpent en fonction
- * de la direction actuelle (gauche, haut, droite, bas). Le reste du corps du serpent
- * suit la tête. La fonction retourne un objet représentant la nouvelle position de la tête du serpent.
- *
- * @param {Array<{x: number, y: number}>} snake - Le tableau représentant le serpent, où chaque élément est un segment avec des coordonnées `x` et `y`.
- * @param {string} direction - La direction actuelle du mouvement du serpent ("LEFT", "UP", "RIGHT", ou "DOWN").
- * @param {number} box - La taille d'une case de la grille en pixels, utilisée pour déterminer la distance de déplacement du serpent.
- * @returns {{x: number, y: number}} - Un objet représentant les nouvelles coordonnées `x` et `y` de la tête du serpent après le déplacement.
- */
-import { handleDirectionChange } from './controls.js';
-import { gameWidth, gameHeight } from './main.js';
-import {checkWallCollision } from './collision.js'
-/**
- * Dessine le serpent sur le canvas.
- *
- * Cette fonction parcourt chaque segment du serpent et le dessine sur le canvas en utilisant
- * un rectangle coloré. La tête du serpent est dessinée dans une couleur différente des autres segments
- * pour la distinguer visuellement. Chaque segment est dessiné à sa position actuelle sur la grille,
- * avec une taille déterminée par la valeur de `box`.
- *
- * @param {CanvasRenderingContext2D} ctx - Le contexte de rendu 2D du canvas utilisé pour dessiner.
- * @param {Array<{x: number, y: number}>} snake - Un tableau représentant le serpent, où chaque élément est un segment avec des coordonnées `x` et `y`.
- * @param {number} box - La taille d'une case de la grille en pixels, utilisée pour déterminer la taille de chaque segment du serpent.
- */
-const canvas = document.getElementById("gameCanvas");
-const ctx = canvas.getContext("2d");
-let snakeSize = 24;
-let backgroundColor = "#1f1f1f";
-let currentDirection;
-export let snakeXToChange = 24;
-export let snakeYToChange = 0;
-let snakeX = 600 / 2 - 12; 
-let snakeY = 600 / 2 - 12; 
-const snakeColor = "white";
+  switch (direction) {
+    case 'UP':
+      head.y -= gridSize;
+      break;
+    case 'DOWN':
+      head.y += gridSize;
+      break;
+    case 'LEFT':
+      head.x -= gridSize;
+      break;
+    case 'RIGHT':
+      head.x += gridSize;
+      break;
+  }
 
-export function moveSnake() {
+  snake.unshift(head); 
 
-  snakeX += snakeXToChange;
-  snakeY += snakeYToChange;
-
-
-  if (checkWallCollision(snakeX, snakeY, gameWidth, gameHeight)) {
-    isGameRunning = false;
+  if (!checkAppleCollision(snake)) {
+    snake.pop();
   }
 }
 
-export function drawSnake() {
-  ctx.beginPath();
-  ctx.clearRect(snakeX - 5, snakeY - 5, 55, 55); 
-
-  ctx.rect(snakeX, snakeY, snakeSize, snakeSize); 
-  ctx.stroke();
-  ctx.fillStyle = snakeColor;
-  ctx.fillRect(snakeX, snakeY, snakeSize, snakeSize);
+export function drawSnake(ctx, gridSize) {
+  ctx.fillStyle = 'green';
+  snake.forEach(segment => {
+    ctx.fillRect(segment.x, segment.y, gridSize, gridSize);
+  });
 }
-
-document.addEventListener("keydown", (keyPressed) => {
-  const direction = handleDirectionChange(keyPressed, currentDirection, snakeXToChange, snakeYToChange);
-
-
-  snakeXToChange = direction.snakeXToChange;
-  snakeYToChange = direction.snakeYToChange;
-  currentDirection = direction.currentDirection; 
-});

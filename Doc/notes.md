@@ -89,6 +89,35 @@
 
 ## 13.12.24
 
-### Bugfix Mouvement (30mins)
+### Bugfix Mouvement (30mins) 
 
 - Le mouvement marche comme normal 
+
+### Cleanup (10mins) [DONE]
+
+- J'ai realisé que mon code est moche donc j'ai enleve tout les commentaires du projet de base et rearrangé les bouts de code (Je peut retrouver les commentaires dans la base, ce n'est pas un probleme)
+
+### Optimisation food.js (20mins) [DONE]
+
+- J'ai rendu mon code food.js plus efficace (par example, il y avait une fonction GetRandomPos qui servait a rien)
+- Implementation de grid 
+
+### Fait snake (60mins) [DONE]
+
+- Je me suis reseigné et j'ai implementé de la logique de snake
+- (Ajout de collision entre pomme et snake, snake deviens plus grand, snake bouge avec son corps)
+- Le code n'est pas a son bon fichier, j'ai deja fait un code qui marche, je le rearangerait quand il sera fini
+
+### Optimisation Controles (10mins) [DONE]
+
+- Mon code de controles etait trops long, je l'ai raccouci de 100+ lignes a 22 (pas mal)
+
+### Bugfix vitesse (15mins) [DONE]
+
+- La vitesse avait 0 consistence j'ai du un peut bouger les intervales, rien de complique
+
+## MD/ Journal de travail (20mins)
+
+- J'ai oublie de faire les descriptions de ce que j'ai fait mon journal de travail .md (et donc des commits)
+- Tout entre cleanup et cette entrée sera donc sur un commit
+- Pas proffessionel desolé mr Carrel
