@@ -76,4 +76,19 @@
 - J'ai enfin resolut mon probleme de mouvement
 - J'ai ajoute un check pour pas pouvoir toucher les murs
 
-14 25
+### Cleanup (80mins)
+
+- J'ai essaye de changer et metre le code dans snake.js 
+- (J'ai mis ce que j'ai changer dans le commit meme si je ne vais pas utiliser les changements)
+
+## 06.12.24
+
+### Preparation Portes Ouvertes (315mins)
+
+- La classe etait pas la on preparait les portes ouvertes de l'ETML
+
+## 13.12.24
+
+### Bugfix Mouvement (30mins)
+
+- Le mouvement marche comme normal 

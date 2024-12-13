@@ -24,8 +24,9 @@ function initSnake() {
  * @param {number} box - La taille d'une case de la grille en pixels, utilisée pour déterminer la distance de déplacement du serpent.
  * @returns {{x: number, y: number}} - Un objet représentant les nouvelles coordonnées `x` et `y` de la tête du serpent après le déplacement.
  */
-
-
+import { handleDirectionChange } from './controls.js';
+import { gameWidth, gameHeight } from './main.js';
+import {checkWallCollision } from './collision.js'
 /**
  * Dessine le serpent sur le canvas.
  *
@@ -38,14 +39,22 @@ function initSnake() {
  * @param {Array<{x: number, y: number}>} snake - Un tableau représentant le serpent, où chaque élément est un segment avec des coordonnées `x` et `y`.
  * @param {number} box - La taille d'une case de la grille en pixels, utilisée pour déterminer la taille de chaque segment du serpent.
  */
-import {gameWidth, gameHeight, snakeX, snakeY} from './main.js';
-
+const canvas = document.getElementById("gameCanvas");
+const ctx = canvas.getContext("2d");
+let snakeSize = 24;
+let backgroundColor = "#1f1f1f";
+let currentDirection;
 export let snakeXToChange = 24;
 export let snakeYToChange = 0;
+let snakeX = 600 / 2 - 12; 
+let snakeY = 600 / 2 - 12; 
+const snakeColor = "white";
 
 export function moveSnake() {
+
   snakeX += snakeXToChange;
   snakeY += snakeYToChange;
+
 
   if (checkWallCollision(snakeX, snakeY, gameWidth, gameHeight)) {
     isGameRunning = false;
@@ -54,10 +63,19 @@ export function moveSnake() {
 
 export function drawSnake() {
   ctx.beginPath();
-  ctx.clearRect(snakeX-5, snakeY-5, 55, 55);
+  ctx.clearRect(snakeX - 5, snakeY - 5, 55, 55); 
 
-  ctx.rect(snakeX, snakeY, snakeSize, snakeSize);
+  ctx.rect(snakeX, snakeY, snakeSize, snakeSize); 
   ctx.stroke();
   ctx.fillStyle = snakeColor;
   ctx.fillRect(snakeX, snakeY, snakeSize, snakeSize);
 }
+
+document.addEventListener("keydown", (keyPressed) => {
+  const direction = handleDirectionChange(keyPressed, currentDirection, snakeXToChange, snakeYToChange);
+
+
+  snakeXToChange = direction.snakeXToChange;
+  snakeYToChange = direction.snakeYToChange;
+  currentDirection = direction.currentDirection; 
+});
