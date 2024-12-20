@@ -1,7 +1,8 @@
 import { handleControls } from './controls.js';
 import { spawnApple, drawApple, checkAppleCollision } from './food.js';
 import { checkCollisions } from './collision.js';
-import { drawSnake, moveSnake, snake, head } from './snake.js'; // Import snake and head
+import { drawSnake, moveSnake, snake, head } from './snake.js';
+import { drawScore } from './score.js'; 
 
 export const gridSize = 20;  
 const gameWidth = 600;
@@ -25,15 +26,16 @@ function tick() {
       moveSnake(gridSize);  
       drawSnake(ctx, gridSize);  
       drawApple(ctx, gridSize);
-
       if (checkAppleCollision(snake)) {
+        score++; 
+        drawScore(score); 
         spawnApple(gridSize, gameWidth, gameHeight);
       }
-
       if (checkCollisions(snake, gameWidth, gameHeight)) {
         isGameRunning = false;
+        alert('Game Over!'); 
+        clearBoard();
       }
-
       tick();  
     }, 100);
   }

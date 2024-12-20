@@ -140,3 +140,9 @@
 - J'ai fait que elle se met a jour, donc les collisions marchent toutes
 - Je fait le score et un ecran de gameOver en prochain
 - Le bug est super facile a voire maintentant que je l'ai fix mais ca a pris beaucoup de temps a trouver
+
+### Add Score / Gameover (30mins) [DONE]
+
+- J'ai ajoute des detections gameOver
+- J'ai ajoute la fonction DrawScore() qui marche pour changer le score
+- NEXT: je vais faire des changements QOL (tete de couleur differente, menu, ecran de gameOver)
