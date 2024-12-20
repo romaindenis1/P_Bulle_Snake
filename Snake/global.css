@@ -1,10 +1,8 @@
-/* Global reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  
   body {
     display: flex;
     justify-content: center;
@@ -15,7 +13,6 @@
     font-family: Arial, sans-serif;
     position: relative;
   }
-  
   header {
     color: #fff;
     font-size: 3rem;
@@ -26,17 +23,14 @@
     transform: translateX(-50%);
     z-index: 3;
   }
-  
   .game-container {
     position: relative;
   }
-  
   canvas {
     border: 2px solid #2b2b2b;
     background-color: #1f1f1f;
     z-index: 1;
   }
-  
   .score {
     position: absolute;
     top: 10px;
@@ -46,5 +40,23 @@
     font-size: 1.5rem;
     z-index: 2;
     font-weight: bold;
+  }
+  footer {
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  footer p {
+    margin: 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
   }
   

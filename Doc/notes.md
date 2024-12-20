@@ -14,7 +14,6 @@
 
  - Lu et rempli le Cdc
 
-
 ### Aide Antoine (10 mins)
 
  - Aide Antoine (Il avait un RDV)
@@ -64,43 +63,43 @@
 
 ### Bugfix Mouvement (20mins)
 
-- J'ai essaye de bugfix mon mouvement
+  - J'ai essaye de bugfix mon mouvement
 
 ### Evaluation avec Prof (80mins)
 
-- J'ai ete evalue par le prof
-- Le prof a regarde mon code et a fait des recommendations
+  - J'ai ete evalue par le prof
+  - Le prof a regarde mon code et a fait des recommendations
 
 ### Bugfix Movement (25mins)
 
-- J'ai enfin resolut mon probleme de mouvement
-- J'ai ajoute un check pour pas pouvoir toucher les murs
+  - J'ai enfin resolut mon probleme de mouvement
+  - J'ai ajoute un check pour pas pouvoir toucher les murs
 
 ### Cleanup (80mins)
 
-- J'ai essaye de changer et metre le code dans snake.js 
-- (J'ai mis ce que j'ai changer dans le commit meme si je ne vais pas utiliser les changements)
+  - J'ai essaye de changer et metre le code dans snake.js 
+  - (J'ai mis ce que j'ai changer dans le commit meme si je ne vais pas utiliser les changements)
 
 ## 06.12.24
 
 ### Preparation Portes Ouvertes (315mins)
 
-- La classe etait pas la on preparait les portes ouvertes de l'ETML
+  - La classe etait pas la on preparait les portes ouvertes de l'ETML
 
 ## 13.12.24
 
 ### Bugfix Mouvement (30mins) 
 
-- Le mouvement marche comme normal 
+  - Le mouvement marche comme normal 
 
 ### Cleanup (10mins) [DONE]
 
-- J'ai realisé que mon code est moche donc j'ai enleve tout les commentaires du projet de base et rearrangé les bouts de code (Je peut retrouver les commentaires dans la base, ce n'est pas un probleme)
+  - J'ai realisé que mon code est moche donc j'ai enleve tout les commentaires du projet de base et rearrangé les bouts de code (Je peut retrouver les commentaires dans la base, ce n'est pas un probleme)
 
 ### Optimisation food.js (20mins) [DONE]
 
-- J'ai rendu mon code food.js plus efficace (par example, il y avait une fonction GetRandomPos qui servait a rien)
-- Implementation de grid 
+  - J'ai rendu mon code food.js plus efficace (par example, il y avait une fonction GetRandomPos qui servait a rien)
+  - Implementation de grid 
 
 ### Fait snake (60mins) [DONE]
 
@@ -110,39 +109,53 @@
 
 ### Optimisation Controles (10mins) [DONE]
 
-- Mon code de controles etait trops long, je l'ai raccouci de 100+ lignes a 22 (pas mal)
+  - Mon code de controles etait trops long, je l'ai raccouci de 100+ lignes a 22 (pas mal)
 
 ### Bugfix vitesse (15mins) [DONE]
 
-- La vitesse avait 0 consistence j'ai du un peut bouger les intervales, rien de complique
+  - La vitesse avait 0 consistence j'ai du un peut bouger les intervales, rien de complique
 
 ## MD/ Journal de travail (20mins)
 
-- J'ai oublie de faire les descriptions de ce que j'ai fait mon journal de travail .md (et donc des commits)
-- Tout entre cleanup et cette entrée sera donc sur un commit
-- Pas proffessionel desolé mr Carrel
+  - J'ai oublie de faire les descriptions de ce que j'ai fait mon journal de travail .md (et donc des commits)
+  - Tout entre cleanup et cette entrée sera donc sur un commit
+  - Pas proffessionel desolé mr Carrel
 
 ## 20.12.24
 
 ### Setup Secret Santa (15mins)
 
-- On a dépose tout les cadeaux secret santa
+  - On a dépose tout les cadeaux secret santa
 
 ### Tweaks CSS/ HTML (50mins) [DONE]
 
-- J'ai changé le CSS pour que il soit plus beau
-- Je me suis renseigné sur les translations CSS
-- J'ai ajouté un score qui est dans le canvas
+  - J'ai changé le CSS pour que il soit plus beau
+  - Je me suis renseigné sur les translations CSS
+  - J'ai ajouté un score qui est dans le canvas
 
 ### Head Bugfix (45mins) [DONE]
 
-- La tete ne se mettait pas a jour et restait a {x: 200, y: 200}
-- J'ai fait que elle se met a jour, donc les collisions marchent toutes
-- Je fait le score et un ecran de gameOver en prochain
-- Le bug est super facile a voire maintentant que je l'ai fix mais ca a pris beaucoup de temps a trouver
+  - La tete ne se mettait pas a jour et restait a {x: 200, y: 200}
+  - J'ai fait que elle se met a jour, donc les collisions marchent toutes
+  - Je fait le score et un ecran de gameOver en prochain
+  - Le bug est super facile a voire maintentant que je l'ai fix mais ca a pris beaucoup de temps a trouver
 
 ### Add Score / Gameover (30mins) [DONE]
 
-- J'ai ajoute des detections gameOver
-- J'ai ajoute la fonction DrawScore() qui marche pour changer le score
-- NEXT: je vais faire des changements QOL (tete de couleur differente, menu, ecran de gameOver)
+  - J'ai ajoute des detections gameOver
+  - J'ai ajoute la fonction DrawScore() qui marche pour changer le score
+  - NEXT: je vais faire des changements QOL (tete de couleur differente, menu, ecran de gameOver)
+
+### QOL changes (1h) [DONE]
+
+  - J'ai fait un footer
+  - Je me suis renseigné sur le JSDOC
+  - J'ai fait la documentation JSDOC
+  - J'ai fait que le snake commence avec 3 segments
+  - Ajouté un timer et bouge le score
+  - NEXT: menu game over + boutton restart
+
+### Secret Santa (45mins) [WIP]
+
+  - On va faire le secret santa
+  - Bonne Vacances :D

@@ -1,5 +1,12 @@
+/**
+ * The current direction of the snake.
+ * @type {string}
+ */
 export let direction = 'RIGHT';
 
+/**
+ * Sets up the event listener for handling keyboard controls.
+ */
 export function handleControls() {
   document.addEventListener('keydown', (event) => {
     switch (event.key) {
@@ -16,7 +23,7 @@ export function handleControls() {
         if (direction !== 'LEFT') direction = 'RIGHT';
         break;
       default:
-      break;
+        break;
     }
   });
 }
