@@ -128,8 +128,15 @@
 
 - On a dépose tout les cadeaux secret santa
 
-### Tweaks CSS/ HTML
+### Tweaks CSS/ HTML (50mins) [DONE]
 
 - J'ai changé le CSS pour que il soit plus beau
 - Je me suis renseigné sur les translations CSS
 - J'ai ajouté un score qui est dans le canvas
+
+### Head Bugfix (45mins) [DONE]
+
+- La tete ne se mettait pas a jour et restait a {x: 200, y: 200}
+- J'ai fait que elle se met a jour, donc les collisions marchent toutes
+- Je fait le score et un ecran de gameOver en prochain
+- Le bug est super facile a voire maintentant que je l'ai fix mais ca a pris beaucoup de temps a trouver
