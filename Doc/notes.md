@@ -121,3 +121,15 @@
 - J'ai oublie de faire les descriptions de ce que j'ai fait mon journal de travail .md (et donc des commits)
 - Tout entre cleanup et cette entrée sera donc sur un commit
 - Pas proffessionel desolé mr Carrel
+
+## 20.12.24
+
+### Setup Secret Santa (15mins)
+
+- On a dépose tout les cadeaux secret santa
+
+### Tweaks CSS/ HTML
+
+- J'ai changé le CSS pour que il soit plus beau
+- Je me suis renseigné sur les translations CSS
+- J'ai ajouté un score qui est dans le canvas

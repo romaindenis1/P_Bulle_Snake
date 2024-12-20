@@ -24,17 +24,24 @@ function tick() {
   if (isGameRunning) {
     setTimeout(() => {
       clearBoard();
-      moveSnake(gridSize);
-      drawSnake(ctx, gridSize);  
-      drawApple(ctx, gridSize);
-
+      
+      if (!checkCollisions(snake, gameWidth, gameHeight)) {
+        moveSnake(gridSize);
+      } else {
+        endGame();  
+        return;     
+      }
+      
+      drawSnake(ctx, gridSize);
+      
 
       if (checkAppleCollision(snake)) {  
-        //Condition a faire
+        spawnApple(gridSize, gameWidth, gameHeight);  
       }
-
-      checkCollisions(snake);
-      tick();
+      
+      drawApple(ctx, gridSize); 
+      
+      tick();  
     }, 100);
   }
 }

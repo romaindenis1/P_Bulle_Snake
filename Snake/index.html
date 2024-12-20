@@ -4,13 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Snake Romain</title>
-    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="global.css" />
   </head>
-  <header>
-    <p>Snake</p>
-  </header>
   <body>
-    <canvas id="gameCanvas" width="600" height="600"></canvas>
+    <header>
+      <h1>Snake</h1>
+    </header>
+    <div class="game-container">
+      <canvas id="gameCanvas" width="600" height="600"></canvas>
+      <div class="score" id="scoreDisplay">Score: 0</div>
+    </div>
     <script type="module" src="./src/main.js"></script>
     <script type="module" src="./src/food.js"></script>
   </body>

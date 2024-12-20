@@ -4,8 +4,7 @@ import { checkAppleCollision } from './food.js';
 let snake = [{ x: 200, y: 200 }];  
 
 export function moveSnake(gridSize) {
-  const head = { ...snake[0] };
-
+  const head = { x:snake[0].x, y:snake[0].y }
   switch (direction) {
     case 'UP':
       head.y -= gridSize;
@@ -29,7 +28,8 @@ export function moveSnake(gridSize) {
 }
 
 export function drawSnake(ctx, gridSize) {
-  ctx.fillStyle = 'green';
+
+  ctx.fillStyle = 'darkgreen';
   snake.forEach(segment => {
     ctx.fillRect(segment.x, segment.y, gridSize, gridSize);
   });
