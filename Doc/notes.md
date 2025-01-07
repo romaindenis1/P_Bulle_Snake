@@ -41,6 +41,11 @@
 
  - Tout le code est dans le bon .js
 
+### Lire documentation (90mins)
+
+ - Entree mit pendant P_Prod le 07.01.24 car elle a été oublié
+ - Temps est un minimum peut etre plus (pas pro)
+
 ## 22.11.2024
 
 ### Prof parle (30mins)
@@ -76,6 +81,8 @@
   - J'ai ajoute un check pour pas pouvoir toucher les murs
 
 ### Cleanup (80mins)
+
+  (note: ce commit c'est fait 2 fois, je ne sais pas pourquoi)
 
   - J'ai essaye de changer et metre le code dans snake.js 
   - (J'ai mis ce que j'ai changer dans le commit meme si je ne vais pas utiliser les changements)
