@@ -155,7 +155,7 @@
 
 ### QOL changes (1h) [DONE]
 
-  - J'ai fait un footer
+  - J'ai fait un footer 
   - Je me suis renseigné sur le JSDOC
   - J'ai fait la documentation JSDOC
   - J'ai fait que le snake commence avec 3 segments
