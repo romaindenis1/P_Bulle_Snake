@@ -3,9 +3,16 @@
  *
  * @param {number} score - The current score to display.
  */
-export function drawScore(score) {
-  const scoreElement = document.getElementById('scoreDisplay');
-  if (scoreElement) {
-    scoreElement.textContent = `Score: ${score}`;
-  }
+/**
+ * Draws the score and timer on the canvas.
+ */
+import { score, timeElapsed } from './main.js';
+
+const canvas = document.getElementById('gameCanvas');
+const ctx = canvas.getContext('2d');
+export function drawScoreAndTimer(gameWidth, gameHeight) {
+  ctx.fillStyle = 'white';
+  ctx.font = '20px Arial';
+  ctx.fillText(`Score: ${score}`, 10, 30);
+  ctx.fillText(`Time: ${timeElapsed}s`, gameWidth - 100, 30);
 }

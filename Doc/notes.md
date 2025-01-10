@@ -6,7 +6,7 @@
 
 ### Note
 
-  - C'etait la premiere semaine, je pense que j'ai oublié de tout noter
+  - C'etait la premiere semaine, je pense que j'ai oublié de tout noter. Aussi possiblement par ce que j'ai 4 commits (pour l'instant) qui sont mal formatés et ne sont pas dans le gitjournal
 
 ### Introduction du projet (40 mins)
 
@@ -211,5 +211,12 @@
   - J'ai tout checké sur le journal. Meme si je n'ait pas pu metre des commits dans le passé par ce que je n'ait rien oublié comme tache, j'ai mit des notes le 8 novembre, 29 novembre, 13 decembre
   - Le journal n'est pas parfait mais c'est le plus précis que je peut faire avec ma memoire
   - Prix un peut plus de temps que prevu
+
+### Question M. Carell (25mins) [DONE]
+
+  - M. Carell est venu et m'a posé des questions
+  - Il m'a montré que j'avait un "Epave" dans mon fichier score avec du code non utilisé
+  - Changement de code dans score.js
+  - -2 Points JSP :(
 
   //14h10

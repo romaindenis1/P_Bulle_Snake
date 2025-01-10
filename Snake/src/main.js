@@ -2,10 +2,11 @@ import { handleControls } from './controls.js';
 import { spawnApple, drawApple, checkAppleCollision } from './food.js';
 import { checkCollisions } from './collision.js';
 import { drawSnake, moveSnake, snake, head } from './snake.js';
+import { drawScoreAndTimer } from './score.js';
 
-let score = 0;
+export let score = 0;
 let isGameRunning = true;
-let timeElapsed = 0;
+export let timeElapsed = 0;
 
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
@@ -52,10 +53,10 @@ function tick(gridSize, gameWidth, gameHeight, tickInterval) {
       drawScoreAndTimer(gameWidth, gameHeight);
 
       if (checkAppleCollision(snake)) {
+        
         score++;
         spawnApple(gridSize, gameWidth, gameHeight);
       }
-
       if (checkCollisions(snake, gameWidth, gameHeight)) {
         isGameRunning = false;
         gameOver(gameWidth, gameHeight);
@@ -84,15 +85,7 @@ function startTimer(timerInterval) {
   }, timerInterval);
 }
 
-/**
- * Draws the score and timer on the canvas.
- */
-function drawScoreAndTimer(gameWidth, gameHeight) {
-  ctx.fillStyle = 'white';
-  ctx.font = '20px Arial';
-  ctx.fillText(`Score: ${score}`, 10, 30);
-  ctx.fillText(`Time: ${timeElapsed}s`, gameWidth - 100, 30);
-}
+
 
 /**
  * Displays the game over screen.
