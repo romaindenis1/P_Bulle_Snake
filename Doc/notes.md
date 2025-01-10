@@ -178,3 +178,13 @@
   - L'ecran de gameover n'est plus que un alert("game over");
   - Maintenant, l'ecran s'assombit, puis le programme ecrit "Game Over" avec le score et le temps de la partie
   - NEXT: faire le fichier config.json qui contient tout les constantes 
+
+### Implementation config.json (45mins) [DONE]
+
+  - Le fichier config.json est utilise pour les constantes principales du jeu.
+  - Update readme.md
+  - Next: Fix gitjournal, puis JSONBIN
+  
+  
+  
+  //13h45
