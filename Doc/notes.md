@@ -1,6 +1,12 @@
 # Romain Denis
 
+# Journal de travail
+
 ## 08.11.2024
+
+### Note
+
+  - C'etait la premiere semaine, je pense que j'ai oublié de tout noter
 
 ### Introduction du projet (40 mins)
 
@@ -9,6 +15,7 @@
 - Exemple description : [45] [Done]
 - Question à se poser pour nommer un commit : "Qu'est ce que j'ai fait pour arriver au résultat?" donc, quoi(sur quoi): qu'est ce qui est fait
 - Description des commits (Journal de travail) : [temps] [WIP ou DONE]
+- **Il y a eu des changements, regardez notes.md pour la journée qui correspond**
 
 ### Lecture CdC (15 mins)
 
@@ -66,9 +73,15 @@
 
 ## 29.11.2024
 
+### Note :
+
+  - J'ai aucune idee pourquoi ce commit est 2 fois.
+  - Le temps reel du 29 novembre est de 3h25m
+
 ### Bugfix Mouvement (20mins)
 
   - J'ai essaye de bugfix mon mouvement
+  - **Il y a eu des changements, regardez notes.md pour la journée qui correspond**
 
 ### Evaluation avec Prof (80mins)
 
@@ -95,9 +108,15 @@
 
 ## 13.12.24
 
+### Note :
+  
+  - Je pense que certaines activités on ete estimées et estimées trops basses.
+  - Tout avait semblance de se passer tres bien et tout marchait du premier coup c'est pour ca que le temps est si bas
+
 ### Bugfix Mouvement (30mins) 
 
   - Le mouvement marche comme normal 
+  - **Il y a eu des changements, regardez notes.md pour la journée qui correspond**
 
 ### Cleanup (10mins) [DONE]
 
@@ -130,9 +149,11 @@
 
 ## 20.12.24
 
-### note: 
+### Note: 
   - Commit fait pendant P_Prod 07.01.2025
-  - Le temps de gitjournal etait faux dans le commit donc j'ajoute 150 minutes (245 - 95) 
+  - Le temps de gitjournal etait faux dans le commit donc j'ajoute 150 minutes (245 - 95)
+  - 150 minutes est la difference entre notes.md et le commit
+  - **Il y a eu des changements, regardez notes.md pour la journée qui correspond**
 
 ### Setup Secret Santa (15mins)
 
@@ -184,7 +205,11 @@
   - Le fichier config.json est utilise pour les constantes principales du jeu.
   - Update readme.md
   - Next: Fix gitjournal, puis JSONBIN
-  
-  
-  
-  //13h45
+
+### Fix gitjournal (25mins) [DONE]
+
+  - J'ai tout checké sur le journal. Meme si je n'ait pas pu metre des commits dans le passé par ce que je n'ait rien oublié comme tache, j'ai mit des notes le 8 novembre, 29 novembre, 13 decembre
+  - Le journal n'est pas parfait mais c'est le plus précis que je peut faire avec ma memoire
+  - Prix un peut plus de temps que prevu
+
+  //14h10
