@@ -219,4 +219,16 @@
   - Changement de code dans score.js
   - -2 Points JSP :(
 
-  //14h10
+### Essaye boutton restart (90mins) [WIP]
+
+  - J'ai essaye de faire un boutton restart, mais j'ai eu que des bugs de pire en pire pendant 1h30
+  - Meme charles henri ne savait pas
+  - Triste que je 'ai rien a montrer pour ceci
+
+### Release GitHub (10mins) [WIP]
+
+  - Je vais faire la release github
+  - Projet tres fun a faire et a decouvrir le JS
+  - Bye Bye
+
+# Fin Projet
