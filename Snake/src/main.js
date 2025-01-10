@@ -3,9 +3,10 @@ import { spawnApple, drawApple, checkAppleCollision } from './food.js';
 import { checkCollisions } from './collision.js';
 import { drawSnake, moveSnake, snake, head } from './snake.js';
 
-export const gridSize = 20;
-const gameWidth = 600;
-const gameHeight = 600;
+
+const config = fetch('config.json')
+
+const { gridSize, gameWidth, gameHeight, tickInterval, timerInterval } = config;
 let score = 0;
 let isGameRunning = true;
 let timeElapsed = 0;
@@ -42,12 +43,11 @@ function tick() {
 
       if (checkCollisions(snake, gameWidth, gameHeight)) {
         isGameRunning = false;
-        alert('Game Over!');
-        clearBoard();
+        gameOver();
       }
 
       tick();
-    }, 100);
+    }, tickInterval);
   }
 }
 
@@ -66,7 +66,7 @@ function startTimer() {
     if (isGameRunning) {
       timeElapsed++;
     }
-  }, 1000);
+  }, timerInterval);
 }
 
 /**
@@ -77,6 +77,26 @@ function drawScoreAndTimer() {
   ctx.font = '20px Arial';
   ctx.fillText(`Score: ${score}`, 10, 30);
   ctx.fillText(`Time: ${timeElapsed}s`, gameWidth - 100, 30);
+}
+
+/**
+ * Displays the game over screen.
+ */
+function gameOver() {
+  // Sombrir fond
+  ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
+  ctx.fillRect(0, 0, gameWidth, gameHeight);
+
+  // Game Over
+  ctx.fillStyle = 'white';
+  ctx.font = '50px Arial';
+  ctx.textAlign = 'center';
+  ctx.fillText('Game Over', gameWidth / 2, gameHeight / 2);
+
+  // Score et temps
+  ctx.font = '30px Arial';
+  ctx.fillText(`Score: ${score}`, gameWidth / 2 - 100, gameHeight / 2 + 50);
+  ctx.fillText(`Time: ${timeElapsed}s`, gameWidth / 2 + 100, gameHeight / 2 + 50);
 }
 
 // Start the game

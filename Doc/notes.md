@@ -43,7 +43,7 @@
 
 ### Lire documentation (90mins)
 
- - Entree mit pendant P_Prod le 07.01.24 car elle a été oublié
+ - Entree mit pendant P_Prod le 07.01.25 car elle a été oublié
  - Temps est un minimum peut etre plus (pas pro)
 
 ## 22.11.2024
@@ -130,6 +130,10 @@
 
 ## 20.12.24
 
+### note: 
+  - Commit fait pendant P_Prod 07.01.2025
+  - Le temps de gitjournal etait faux dans le commit donc j'ajoute 150 minutes (245 - 95) 
+
 ### Setup Secret Santa (15mins)
 
   - On a dépose tout les cadeaux secret santa
@@ -162,7 +166,15 @@
   - Ajouté un timer et bouge le score
   - NEXT: menu game over + boutton restart
 
-### Secret Santa (45mins) [WIP]
+### Secret Santa (45mins) [DONE]
 
   - On va faire le secret santa
   - Bonne Vacances :D
+
+## 10.01.24
+
+### Amelioration ecran de gameover (45mins) [DONE]
+
+  - L'ecran de gameover n'est plus que un alert("game over");
+  - Maintenant, l'ecran s'assombit, puis le programme ecrit "Game Over" avec le score et le temps de la partie
+  - NEXT: faire le fichier config.json qui contient tout les constantes 
